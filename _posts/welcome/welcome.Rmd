@@ -1,7 +1,8 @@
 ---
-title: "Welcome to Ukrainian Martial Law Project"
+title: "Ukrainian Martial Law Project Descriptive Statistics"
 description: |
-  This is the data repository for the Ukrainian martial law research project
+  This is the initial review of the basic statistical data from the martial law
+  survey dataset.
 author:
   - name: Kristina Becvar
     url: https://kristinabecvar.com

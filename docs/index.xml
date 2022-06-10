@@ -2,18 +2,19 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
   <channel>
     <title>Ukrainian Martial Law Project</title>
-    <link>www.kristinabecvar.com</link>
-    <atom:link href="www.kristinabecvar.com/index.xml" rel="self" type="application/rss+xml"/>
+    <link>https://kbec19.github.io/hsl-ukraine/</link>
+    <atom:link href="https://kbec19.github.io/hsl-ukraine/index.xml" rel="self" type="application/rss+xml"/>
     <description>Ukrainian Martial Law Project
 </description>
     <generator>Distill</generator>
     <lastBuildDate>Thu, 09 Jun 2022 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>Welcome to Ukrainian Martial Law Project</title>
+      <title>Ukrainian Martial Law Project Descriptive Statistics</title>
       <dc:creator>Kristina Becvar</dc:creator>
-      <link>www.kristinabecvar.com/posts/welcome</link>
-      <description>This is the data repository for the Ukrainian martial law research project</description>
-      <guid>www.kristinabecvar.com/posts/welcome</guid>
+      <link>https://kbec19.github.io/hsl-ukraine/posts/welcome</link>
+      <description>This is the initial review of the basic statistical data from the martial law
+survey dataset.</description>
+      <guid>https://kbec19.github.io/hsl-ukraine/posts/welcome</guid>
       <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
     </item>
   </channel>

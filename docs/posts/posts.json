@@ -1,8 +1,8 @@
 [
   {
     "path": "posts/welcome/",
-    "title": "Welcome to Ukrainian Martial Law Project",
-    "description": "This is the data repository for the Ukrainian martial law research project",
+    "title": "Ukrainian Martial Law Project Descriptive Statistics",
+    "description": "This is the initial review of the basic statistical data from the martial law\nsurvey dataset.",
     "author": [
       {
         "name": "Kristina Becvar",
@@ -13,7 +13,7 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2022-06-09T23:25:03-05:00",
-    "input_file": {}
+    "last_modified": "2022-06-09T23:41:21-05:00",
+    "input_file": "welcome.knit.md"
   }
 ]
