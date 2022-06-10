@@ -18,9 +18,136 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 
-# Learn more about creating blogs with Distill at:
-# https://rstudio.github.io/distill/blog.html
+library(tidyverse)
+library(plyr); library(dplyr)
+library(ggplot2)
+library(cowplot)
+library(broom)
+library(scales)
 
+```
+
+
+# Variables
+
+Variables for Ukraine Martial Law Demographic Data:
+
+Region
+
+Age
+
+Age Group
+
+Gender
+
+Language
+
+Education
+
+Income Level
+
+Response:
+
+* *stay: “should be required to stay”*
+* *flee: “should be permitted to flee”*
+* *different: “my view different from either”*
+
+# Data Analysis
+```{r echo=FALSE}
+#load the data
+martial_data <- read_csv("martial-data.csv")
+```
+
+## General Observations
+
+### Number of responses: "Flee", "Stay", or "Different"
+
+```{r echo=FALSE}
+table(martial_data$response)
+```
+
+### Respondent Mean Age
+
+```{r echo=FALSE}
+table(martial_data$age_group)
+```
+
+### Respondent Age Group Counts
+
+```{r echo=FALSE}
+table(martial_data$age_group)
+```
+
+### Respondent Gender Distribution
+
+```{r echo=FALSE}
+table(martial_data$gender)
+```
+
+### Respondent Language Distribution
+
+```{r echo=FALSE}
+table(martial_data$language)
+```
+
+### Respondent Education Distribution
+
+```{r echo=FALSE}
+table(martial_data$education)
+```
+
+### Respondent Income Level Distribution
+
+```{r echo=FALSE}
+table(martial_data$income)
+```
+
+## Summary Data
+
+### Mean Age by Response
+
+* Mean age for those choosing "Should have to stay" is 38.18
+* Mean age for those choosing "Should be permitted to flee" is 35.78
+* Mean age for those choosing a different response is 39.58
+
+```{r echo=FALSE}
+by(martial_data, martial_data$response, summary)
+```
+
+### Age Group by Response Type
+
+```{r echo=FALSE}
+table(martial_data$response, martial_data$age_group)
+```
+
+### Gender by Response Type
+
+```{r echo=FALSE}
+table(martial_data$response, martial_data$gender)
+```
+
+### Language by Response Type
+
+```{r echo=FALSE}
+table(martial_data$response, martial_data$language)
+```
+
+### Education by Response Type
+
+```{r echo=FALSE}
+table(martial_data$response, martial_data$education)
+```
+
+### Income Level by Response Type
+
+```{r echo=FALSE}
+table(martial_data$response, martial_data$income)
+```
+
+### Region by Response Type
+
+```{r echo=FALSE}
+table(martial_data$response, martial_data$region)
 ```
 
 

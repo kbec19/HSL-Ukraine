@@ -3158,7 +3158,291 @@ martial law survey dataset.</p></p>
 </div>
 
 <div class="d-article">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#variables">Variables</a></li>
+<li><a href="#data-analysis">Data Analysis</a>
+<ul>
+<li><a href="#general-observations">General Observations</a>
+<ul>
+<li><a href="#number-of-responses-flee-stay-or-different">Number of
+responses: “Flee”, “Stay”, or “Different”</a></li>
+<li><a href="#respondent-mean-age">Respondent Mean Age</a></li>
+<li><a href="#respondent-age-group-counts">Respondent Age Group
+Counts</a></li>
+<li><a href="#respondent-gender-distribution">Respondent Gender
+Distribution</a></li>
+<li><a href="#respondent-language-distribution">Respondent Language
+Distribution</a></li>
+<li><a href="#respondent-education-distribution">Respondent Education
+Distribution</a></li>
+<li><a href="#respondent-income-level-distribution">Respondent Income
+Level Distribution</a></li>
+</ul></li>
+<li><a href="#summary-data">Summary Data</a>
+<ul>
+<li><a href="#mean-age-by-response">Mean Age by Response</a></li>
+<li><a href="#age-group-by-response-type">Age Group by Response
+Type</a></li>
+<li><a href="#gender-by-response-type">Gender by Response Type</a></li>
+<li><a href="#language-by-response-type">Language by Response
+Type</a></li>
+<li><a href="#education-by-response-type">Education by Response
+Type</a></li>
+<li><a href="#income-level-by-response-type">Income Level by Response
+Type</a></li>
+<li><a href="#region-by-response-type">Region by Response Type</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+<h1 id="variables">Variables</h1>
+<p>Variables for Ukraine Martial Law Demographic Data:</p>
+<p>Region</p>
+<p>Age</p>
+<p>Age Group</p>
+<p>Gender</p>
+<p>Language</p>
+<p>Education</p>
+<p>Income Level</p>
+<p>Response:</p>
+<ul>
+<li><em>stay: “should be required to stay”</em></li>
+<li><em>flee: “should be permitted to flee”</em></li>
+<li><em>different: “my view different from either”</em></li>
+</ul>
+<h1 id="data-analysis">Data Analysis</h1>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<h2 id="general-observations">General Observations</h2>
+<h3 id="number-of-responses-flee-stay-or-different">Number of responses:
+“Flee”, “Stay”, or “Different”</h3>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>
+different      flee      stay 
+      847       887      1399 </code></pre>
+</div>
+<h3 id="respondent-mean-age">Respondent Mean Age</h3>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>
+16-24 25-34 35-44 45-54 55-64   65+ 
+  962   744   561   389   240   237 </code></pre>
+</div>
+<h3 id="respondent-age-group-counts">Respondent Age Group Counts</h3>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>
+16-24 25-34 35-44 45-54 55-64   65+ 
+  962   744   561   389   240   237 </code></pre>
+</div>
+<h3 id="respondent-gender-distribution">Respondent Gender
+Distribution</h3>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>
+female   male 
+  1030   2103 </code></pre>
+</div>
+<h3 id="respondent-language-distribution">Respondent Language
+Distribution</h3>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>
+no_response     russian   ukrainian 
+          2        1298        1833 </code></pre>
+</div>
+<h3 id="respondent-education-distribution">Respondent Education
+Distribution</h3>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>
+        bachelors masters-or-higher    post-secondary 
+              657               963               675 
+          primary         secondary 
+              268               570 </code></pre>
+</div>
+<h3 id="respondent-income-level-distribution">Respondent Income Level
+Distribution</h3>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>
+       &lt;30000       &gt;240000 120001-240000   30000-60000  60001-120000 
+         1330           554           299           559           390 
+  no_response 
+            1 </code></pre>
+</div>
+<h2 id="summary-data">Summary Data</h2>
+<h3 id="mean-age-by-response">Mean Age by Response</h3>
+<ul>
+<li>Mean age for those choosing “Should have to stay” is 38.18</li>
+<li>Mean age for those choosing “Should be permitted to flee” is
+35.78</li>
+<li>Mean age for those choosing a different response is 39.58</li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>martial_data$response: different
+    region               age         age_group        
+ Length:847         Min.   :16.00   Length:847        
+ Class :character   1st Qu.:23.00   Class :character  
+ Mode  :character   Median :33.00   Mode  :character  
+                    Mean   :39.58                     
+                    3rd Qu.:47.00                     
+                    Max.   :98.00                     
+    gender            language          education        
+ Length:847         Length:847         Length:847        
+ Class :character   Class :character   Class :character  
+ Mode  :character   Mode  :character   Mode  :character  
+                                                         
+                                                         
+                                                         
+    income            response        
+ Length:847         Length:847        
+ Class :character   Class :character  
+ Mode  :character   Mode  :character  
+                                      
+                                      
+                                      
+---------------------------------------------------- 
+martial_data$response: flee
+    region               age         age_group        
+ Length:887         Min.   :16.00   Length:887        
+ Class :character   1st Qu.:22.00   Class :character  
+ Mode  :character   Median :30.00   Mode  :character  
+                    Mean   :35.78                     
+                    3rd Qu.:42.00                     
+                    Max.   :98.00                     
+    gender            language          education        
+ Length:887         Length:887         Length:887        
+ Class :character   Class :character   Class :character  
+ Mode  :character   Mode  :character   Mode  :character  
+                                                         
+                                                         
+                                                         
+    income            response        
+ Length:887         Length:887        
+ Class :character   Class :character  
+ Mode  :character   Mode  :character  
+                                      
+                                      
+                                      
+---------------------------------------------------- 
+martial_data$response: stay
+    region               age         age_group        
+ Length:1399        Min.   :16.00   Length:1399       
+ Class :character   1st Qu.:23.00   Class :character  
+ Mode  :character   Median :34.00   Mode  :character  
+                    Mean   :38.18                     
+                    3rd Qu.:47.00                     
+                    Max.   :98.00                     
+    gender            language          education        
+ Length:1399        Length:1399        Length:1399       
+ Class :character   Class :character   Class :character  
+ Mode  :character   Mode  :character   Mode  :character  
+                                                         
+                                                         
+                                                         
+    income            response        
+ Length:1399        Length:1399       
+ Class :character   Class :character  
+ Mode  :character   Mode  :character  
+                                      
+                                      
+                                      </code></pre>
+</div>
+<h3 id="age-group-by-response-type">Age Group by Response Type</h3>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>           
+            16-24 25-34 35-44 45-54 55-64 65+
+  different   274   167   156    89    76  85
+  flee        297   231   157    93    50  59
+  stay        391   346   248   207   114  93</code></pre>
+</div>
+<h3 id="gender-by-response-type">Gender by Response Type</h3>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>           
+            female male
+  different    312  535
+  flee         287  600
+  stay         431  968</code></pre>
+</div>
+<h3 id="language-by-response-type">Language by Response Type</h3>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>           
+            no_response russian ukrainian
+  different           1     393       453
+  flee                0     433       454
+  stay                1     472       926</code></pre>
+</div>
+<h3 id="education-by-response-type">Education by Response Type</h3>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>           
+            bachelors masters-or-higher post-secondary primary
+  different       152               299            181      62
+  flee            199               231            185     107
+  stay            306               433            309      99
+           
+            secondary
+  different       153
+  flee            165
+  stay            252</code></pre>
+</div>
+<h3 id="income-level-by-response-type">Income Level by Response
+Type</h3>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>           
+            &lt;30000 &gt;240000 120001-240000 30000-60000 60001-120000
+  different    355     193            73         135           90
+  flee         384     155            87         155          106
+  stay         591     206           139         269          194
+           
+            no_response
+  different           1
+  flee                0
+  stay                0</code></pre>
+</div>
+<h3 id="region-by-response-type">Region by Response Type</h3>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>           
+            Cherkasy Oblast Chernihiv Chernivtsi Oblast Crimea
+  different              15         5                22     40
+  flee                   21        11                16     29
+  stay                   39        19                23     21
+           
+            Dnipropetrovsk Oblast Donetsk Oblast
+  different                    70             66
+  flee                         86             77
+  stay                        129             34
+           
+            Ivano-Frankivsk Oblast Kharkiv Kherson Oblast
+  different                     11      30              9
+  flee                          19      35             16
+  stay                          47      48             19
+           
+            Khmelnytskyi Oblast Kirovohrad Oblast Kyiv City
+  different                  17                15       141
+  flee                       14                14       157
+  stay                       36                42       277
+           
+            Kyiv Oblast Luhansk Lviv Oblast Mykolayiv Oblast Odessa
+  different          25      37          45               13     57
+  flee               21      31          49               17     65
+  stay               38      22          85               39     77
+           
+            Poltava Oblast Rivne Sebastopol City Sumy Ternopil Oblast
+  different             19    10              17   28              19
+  flee                  25     9              16   21              14
+  stay                  43    40               8   27              22
+           
+            Transcarpathia Vinnytsya Oblast Volyn Zaporizhzhya Oblast
+  different             15               76    14                  23
+  flee                  10               56    12                  36
+  stay                  22              151    23                  45
+           
+            Zhytomyr
+  different        8
+  flee            10
+  stay            23</code></pre>
+</div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
