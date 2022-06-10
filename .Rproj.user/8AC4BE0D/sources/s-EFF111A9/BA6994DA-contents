@@ -1,0 +1,26 @@
+---
+title: "Welcome to Ukrainian Martial Law Project"
+description: |
+  This is the data repository for the Ukrainian martial law research project
+author:
+  - name: Kristina Becvar
+    url: https://kristinabecvar.com
+    affiliation: Human Security Lab
+    affiliation_url: https://www.humansecuritylab.net/
+date: 06-09-2022
+output:
+  distill::distill_article:
+    self_contained: true
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating blogs with Distill at:
+# https://rstudio.github.io/distill/blog.html
+
+```
+
+
+
