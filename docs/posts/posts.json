@@ -15,5 +15,24 @@
     "preview": {},
     "last_modified": "2022-06-09T23:46:26-05:00",
     "input_file": "welcome.knit.md"
+  },
+  {
+    "path": "posts/visualizations/",
+    "title": "Visualizing Descriptive Statistics",
+    "description": "Visualzations of the initial review of descriptive statistics from the\nUkraine martial law survey data",
+    "author": [
+      {
+        "name": "Kristina Becvar",
+        "url": "https://kristinabecvar.com"
+      }
+    ],
+    "date": "2022-06-09",
+    "categories": [],
+    "contents": "\r\n\r\nContents\r\nVariables\r\nData Analysis\r\n\r\nVariables\r\nVariables for Ukraine Martial Law Demographic Data:\r\nRegion\r\nAge\r\nAge Group\r\nGender\r\nLanguage\r\nEducation\r\nIncome Level\r\nResponse:\r\nstay: “should be required to stay”\r\nflee: “should be permitted to flee”\r\ndifferent: “my view different from either”\r\nData Analysis\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nlibrary(cowplot)\r\nage_plot <- ggplot(age, aes(fill=classifier, y=count, x=response)) + \r\n  geom_bar(position='stack', stat='identity') +\r\n  labs(x='Response', y='Count', title='Age Distribution of Respondents') +\r\n  theme(plot.title = element_text(hjust=0.5, size=20, face='bold')) +\r\n  theme_minimal_hgrid(12)\r\n\r\nage_plot\r\n\r\n\r\n\r\npie <- age_plot + coord_polar(\"y\", start=0)\r\n\r\npie\r\n\r\n\r\n\r\n\r\n\r\n\r\nlibrary(cowplot)\r\neducation_plot <- ggplot(education, aes(fill=classifier, y=count, x=response)) + \r\n  geom_bar(position='stack', stat='identity') +\r\n  labs(x='Response', y='Count', title='Education Distribution of Respondents') +\r\n  theme(plot.title = element_text(hjust=0.5, size=20, face='bold')) +\r\n  theme_minimal_hgrid(12)\r\n\r\neducation_plot\r\n\r\n\r\n\r\n\r\n\r\n\r\nlibrary(cowplot)\r\nincome_plot <- ggplot(income, aes(fill=classifier, y=count, x=response)) + \r\n  geom_bar(position='stack', stat='identity') +\r\n  labs(x='Response', y='Count', title='Income Distribution of Respondents') +\r\n  theme(plot.title = element_text(hjust=0.5, size=20, face='bold')) +\r\n  theme_minimal_hgrid(12)\r\n\r\nincome_plot\r\n\r\n\r\n\r\n\r\n\r\n\r\nlibrary(cowplot)\r\nlanguage_plot <- ggplot(language, aes(fill=classifier, y=count, x=response)) + \r\n  geom_bar(position='stack', stat='identity') +\r\n  labs(x='Response', y='Count', title='Language Distribution of Respondents') +\r\n  theme(plot.title = element_text(hjust=0.5, size=20, face='bold')) +\r\n  theme_minimal_hgrid(12)\r\n\r\nlanguage_plot\r\n\r\n\r\n\r\n\r\n\r\n\r\nlibrary(cowplot)\r\nsex_plot <- ggplot(sex, aes(fill=classifier, y=count, x=response)) + \r\n  geom_bar(position='stack', stat='identity') +\r\n  labs(x='Response', y='Count', title='Sex Distribution of Respondents') +\r\n  theme(plot.title = element_text(hjust=0.5, size=20, face='bold')) +\r\n  theme_minimal_hgrid(12)\r\n\r\nsex_plot\r\n\r\n\r\n\r\n\r\n\r\n\r\nlibrary(cowplot)\r\nageprop_plot <- ggplot(age_prop, aes(fill=classifier, y=percentage, x=response)) + \r\n  geom_bar(position='stack', stat='identity') +\r\n  labs(x='Response', y='Proportion', title='Age Proportion of Respondents') +\r\n  theme(plot.title = element_text(hjust=0.5, size=20, face='bold')) +\r\n  theme_minimal_hgrid(12)\r\n\r\nageprop_plot\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": "posts/visualizations/visualizations_files/figure-html5/unnamed-chunk-3-1.png",
+    "last_modified": "2022-06-10T01:16:57-05:00",
+    "input_file": "visualizations.knit.md",
+    "preview_width": 1248,
+    "preview_height": 768
   }
 ]

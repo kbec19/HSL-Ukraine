@@ -17,5 +17,15 @@ survey dataset.</description>
       <guid>https://kbec19.github.io/hsl-ukraine/posts/welcome</guid>
       <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
     </item>
+    <item>
+      <title>Visualizing Descriptive Statistics</title>
+      <dc:creator>Kristina Becvar</dc:creator>
+      <link>https://kbec19.github.io/hsl-ukraine/posts/visualizations</link>
+      <description>Visualzations of the initial review of descriptive statistics from the
+Ukraine martial law survey data</description>
+      <guid>https://kbec19.github.io/hsl-ukraine/posts/visualizations</guid>
+      <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://kbec19.github.io/hsl-ukraine/posts/visualizations/visualizations_files/figure-html5/unnamed-chunk-3-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
   </channel>
 </rss>

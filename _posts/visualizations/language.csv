@@ -1,0 +1,10 @@
+﻿response,classifier,count
+flee,ukrainian,454
+stay,ukrainian,926
+different,ukrainian,453
+flee,russian,433
+stay,russian,472
+different,russian,393
+flee,no_language,0
+stay,no_language,1
+different,no_language,1

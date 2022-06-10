@@ -1,0 +1,146 @@
+---
+title: "Visualizing Descriptive Statistics"
+description: |
+  Visualzations of the initial review of descriptive statistics from the
+  Ukraine martial law survey data
+author:
+  - name: Kristina Becvar
+    url: https://kristinabecvar.com
+    affiliation: Human Security Lab
+    affiliation_url: https://www.humansecuritylab.net/
+date: 2022-06-09
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(tidyverse)
+library(plyr); library(dplyr)
+library(ggplot2)
+library(cowplot)
+library(broom)
+library(scales)
+
+```
+
+# Variables
+
+Variables for Ukraine Martial Law Demographic Data:
+
+Region
+
+Age
+
+Age Group
+
+Gender
+
+Language
+
+Education
+
+Income Level
+
+Response:
+
+* *stay: “should be required to stay”*
+* *flee: “should be permitted to flee”*
+* *different: “my view different from either”*
+
+# Data Analysis
+
+```{r echo=FALSE}
+#load the data
+martial_data <- read_csv("martial-data.csv")
+```
+
+```{r echo=FALSE}
+#load the summary data
+summary_data <- read_csv("summary.csv")
+age <-read_csv("age.csv")
+education <-read_csv("education.csv")
+income <-read_csv("income.csv")
+language <-read_csv("language.csv")
+sex <-read_csv("sex.csv")
+age_prop <-read_csv("age_prop.csv")
+```
+
+```{r echo=TRUE}
+library(cowplot)
+age_plot <- ggplot(age, aes(fill=classifier, y=count, x=response)) + 
+  geom_bar(position='stack', stat='identity') +
+  labs(x='Response', y='Count', title='Age Distribution of Respondents') +
+  theme(plot.title = element_text(hjust=0.5, size=20, face='bold')) +
+  theme_minimal_hgrid(12)
+
+age_plot
+
+pie <- age_plot + coord_polar("y", start=0)
+
+pie
+```
+
+```{r echo=TRUE}
+library(cowplot)
+education_plot <- ggplot(education, aes(fill=classifier, y=count, x=response)) + 
+  geom_bar(position='stack', stat='identity') +
+  labs(x='Response', y='Count', title='Education Distribution of Respondents') +
+  theme(plot.title = element_text(hjust=0.5, size=20, face='bold')) +
+  theme_minimal_hgrid(12)
+
+education_plot
+```
+
+```{r echo=TRUE}
+library(cowplot)
+income_plot <- ggplot(income, aes(fill=classifier, y=count, x=response)) + 
+  geom_bar(position='stack', stat='identity') +
+  labs(x='Response', y='Count', title='Income Distribution of Respondents') +
+  theme(plot.title = element_text(hjust=0.5, size=20, face='bold')) +
+  theme_minimal_hgrid(12)
+
+income_plot
+```
+
+```{r echo=TRUE}
+library(cowplot)
+language_plot <- ggplot(language, aes(fill=classifier, y=count, x=response)) + 
+  geom_bar(position='stack', stat='identity') +
+  labs(x='Response', y='Count', title='Language Distribution of Respondents') +
+  theme(plot.title = element_text(hjust=0.5, size=20, face='bold')) +
+  theme_minimal_hgrid(12)
+
+language_plot
+```
+
+
+
+```{r echo=TRUE}
+library(cowplot)
+sex_plot <- ggplot(sex, aes(fill=classifier, y=count, x=response)) + 
+  geom_bar(position='stack', stat='identity') +
+  labs(x='Response', y='Count', title='Sex Distribution of Respondents') +
+  theme(plot.title = element_text(hjust=0.5, size=20, face='bold')) +
+  theme_minimal_hgrid(12)
+
+sex_plot
+```
+
+```{r echo=TRUE}
+library(cowplot)
+ageprop_plot <- ggplot(age_prop, aes(fill=classifier, y=percentage, x=response)) + 
+  geom_bar(position='stack', stat='identity') +
+  labs(x='Response', y='Proportion', title='Age Proportion of Respondents') +
+  theme(plot.title = element_text(hjust=0.5, size=20, face='bold')) +
+  theme_minimal_hgrid(12)
+
+ageprop_plot
+```
+
+
+

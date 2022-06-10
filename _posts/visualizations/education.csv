@@ -1,0 +1,16 @@
+﻿response,classifier,count
+flee,bachelors,199
+stay,bachelors,306
+different,bachelors,152
+flee,masters_higher,231
+stay,masters_higher,433
+different,masters_higher,299
+flee,secondary,165
+stay,secondary,252
+different,secondary,153
+flee,post_secondary,185
+stay,post_secondary,309
+different,post_secondary,181
+flee,primary,107
+stay,primary,99
+different,primary,62
