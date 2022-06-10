@@ -150,5 +150,11 @@ table(martial_data$response, martial_data$income)
 table(martial_data$response, martial_data$region)
 ```
 
-
+```{r code_folding=TRUE}
+#create plot
+ggplot(martial_data, aes(x = response, color = region)) +
+  geom_bar () +
+  facet_wrap("region")
+ggsave("regions.pdf", device="pdf", width=14, height=8, units="in",dpi=600)
+```
 
